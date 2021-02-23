@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Movie Recommender</title>
+    <link rel="stylesheet" href="/static/style.css">
+
+  </head>
+  <body>
+
+    <header class="header" >
+      
+      <h1> {{ title }} </h1>
+      
+      </header>
+      <form class="c1">
+        <br>
+        <br>
+
+        <br>
+        <br>
+      </form>
+      <form class="form">
+        <br>
+        <br>
+        <p class="h2" style="font-size: 35px;">Here are your recommended movies:</p>
+        <ul>
+          {% for m in rec_movies%}
+
+          <li class="h2" style="font-size: 25px;">{{ m }}</li>
+
+          {% endfor %}
+        </ul>
+        <p>
+          <br>
+          <a style="text-align: left;" href="/">Go back to The main page</a>
+        </p>
+
+      </form>
+
+
+  </body>
+</html>

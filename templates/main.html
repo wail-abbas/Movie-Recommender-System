@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Movie Recommender</title>
+    <link rel="stylesheet" href="/static/style.css">
+
+  </head>
+  <body class="body">
+
+    <header class="header" >
+      
+      <h1> {{ title }} </h1>
+      
+      </header>
+
+      <form class="c1">
+        <br>
+        <br>
+
+        <br>
+        <br>
+      </form>
+
+      <form action="/result" class="form">
+        <br>
+        <br>
+        <p class="h2" style="font-size: 33px;">Please Select three Movies and Rate them:</p>
+
+        <select name="movie1" class="select_box" width="50">
+          <option>-- Select the first Movie --</option>
+          {% for m in movies%}
+          <option value='{{ m }}'>{{ m }}</option>
+          {% endfor %}
+        </select>
+
+        <div class="rate">
+          <input type="radio" id="star5" name="rate1" value="5" />
+          <label for="star5" title="text">5 stars</label>
+          <input type="radio" id="star4" name="rate1" value="4" />
+          <label for="star4" title="text">4 stars</label>
+          <input type="radio" id="star3" name="rate1" value="3" />
+          <label for="star3" title="text">3 stars</label>
+          <input type="radio" id="star2" name="rate1" value="2" />
+          <label for="star2" title="text">2 stars</label>
+          <input type="radio" id="star1" name="rate1" value="1" checked/>
+          <label for="star1" title="text">1 star</label>
+        </div>
+        <br>
+        <br>
+        <select name="movie2" class="select_box">
+          <option>-- Select the second Movie --</option>
+          {% for m in movies%}
+          <option value='{{ m }}'>{{ m }}</option>
+        
+          {% endfor %}
+        </select>
+
+        <div class="rate">
+          <input type="radio" id="star10" name="rate2" value="5" />
+          <label for="star10" title="text">5 stars</label>
+          <input type="radio" id="star9" name="rate2" value="4" />
+          <label for="star9" title="text">4 stars</label>
+          <input type="radio" id="star8" name="rate2" value="3" />
+          <label for="star8" title="text">3 stars</label>
+          <input type="radio" id="star7" name="rate2" value="2" />
+          <label for="star7" title="text">2 stars</label>
+          <input type="radio" id="star6" name="rate2" value="1" checked/>
+          <label for="star6" title="text">1 star</label>
+        </div>
+        <br>
+        <br>
+        <select name="movie3" class="select_box">
+          <option>-- Select the third Movie --</option>
+          {% for m in movies%}
+          <option value='{{ m }}'>{{ m }}</option>
+        
+          {% endfor %}
+        </select>
+
+        <div class="rate">
+          <input type="radio" id="star15" name="rate3" value="5" />
+          <label for="star15" title="text">5 stars</label>
+          <input type="radio" id="star14" name="rate3" value="4" />
+          <label for="star14" title="text">4 stars</label>
+          <input type="radio" id="star13" name="rate3" value="3" />
+          <label for="star13" title="text">3 stars</label>
+          <input type="radio" id="star12" name="rate3" value="2" />
+          <label for="star12" title="text">2 stars</label>
+          <input type="radio" id="star11" name="rate3" value="1" checked/>
+          <label for="star11" title="text">1 star</label>
+        </div>
+        <br>
+
+
+        <br>
+        <input type="submit" value="Submit Rating" class="btn">
+        <br>
+        <br>
+        <br>
+        <br>
+      </form>
+
+
+  </body>
+</html>
